@@ -131,9 +131,11 @@
       ${p.descripcion ? `<p class="dish-desc">${esc(p.descripcion)}</p>` : ""}
       ${badge}
       <div class="dish-actions">
-        ${disponible
-          ? `<button class="btn-add" data-add="${esc(p.id)}" aria-label="Añadir ${esc(p.nombre)} al pedido">＋ Añadir</button>`
-          : `<span class="badge no">Agotado hoy</span>`}
+        ${!disponible
+          ? `<span class="badge no">Agotado hoy</span>`
+          : p.categoria === "carta"
+            ? `<button class="btn-add" data-add="${esc(p.id)}" aria-label="Añadir ${esc(p.nombre)} al pedido">＋ Añadir</button>`
+            : ""}
         <button class="btn-ask" data-ask="${esc(p.id)}" aria-label="Consultar por ${esc(p.nombre)}">Consultar</button>
       </div>
     </article>`;
@@ -200,7 +202,7 @@
     const stored = JSON.parse(localStorage.getItem(KEY) || "[]");
     if (Array.isArray(stored)) cart = stored;
   } catch { cart = []; }
-  cart = cart.filter(item => item && findP(item.id) && Number(item.qty) > 0);
+  cart = cart.filter(item => item && findP(item.id)?.categoria === "carta" && Number(item.qty) > 0);
 
   const save = () => {
     try { localStorage.setItem(KEY, JSON.stringify(cart)); } catch { /* modo privado */ }
@@ -287,7 +289,7 @@
 
   function addToCart(id) {
     const p = findP(id);
-    if (!p) return;
+    if (!p || p.categoria !== "carta") return;
     if (p.disponible === false) { toast("Ese plato está agotado hoy."); return; }
     const existing = cart.find(item => item.id === id);
     if (existing) existing.qty += 1;

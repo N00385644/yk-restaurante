@@ -34,6 +34,8 @@ Para habilitar pedidos por WhatsApp, completar `restaurante.whatsapp` con el nú
 
 ## Funciones
 
+La opción «Añadir» al carrito está disponible exclusivamente para los platos de la categoría «A la carta». Las demás categorías conservan la opción de consulta. Los carritos guardados anteriormente se filtran al cargar para respetar esta regla.
+
 Búsqueda sin distinguir tildes, filtros por categoría, carrito y cantidades guardados en el navegador, total estimado, validación de nombre y dirección de delivery, preparación de mensaje por WhatsApp, preguntas desplegables y navegación móvil. El carrito admite teclado, cierre con Escape, foco contenido en el diálogo y retorno al botón de apertura. Se respeta la preferencia de movimiento reducido.
 
 ## Archivos
