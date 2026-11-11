@@ -81,14 +81,14 @@ p { margin: .5rem 0; }
 .hero-btns { display: flex; flex-wrap: wrap; gap: .8rem; }
 .hero-meta { display: flex; flex-direction: column; gap: .5rem; margin-top: 2rem; font-size: .7rem; color: var(--muted); }
 .hero-meta > span { display: flex; align-items: center; gap: .35rem; }
-.hero-art { position: relative; min-height: 590px; display: flex; align-items: start; justify-content: center; padding-top: 6px; }
+.hero-art { position: relative; display: grid; justify-items: center; align-content: start; gap: 32px; padding-top: 6px; }
 .logo-seal { position: relative; display: flex; align-items: center; justify-content: center; width: 376px; height: 376px; border-radius: 50%; background: var(--olive); outline: 1px solid var(--olive); outline-offset: 12px; transform: rotate(-9deg); }
 .logo-seal::before { content: ''; position: absolute; inset: 13px; border: 1px solid #f8f5ee45; border-radius: 50%; }
 .logo-seal img { width: 225px; height: 225px; }
 .seal-top, .seal-bottom { position: absolute; color: #f2e7cd; font-size: .59rem; font-weight: 500; letter-spacing: .23em; }
 .seal-top { top: 36px; }
 .seal-bottom { bottom: 35px; }
-.hero-card { position: absolute; bottom: -5px; right: -10px; width: 265px; padding: 1.5rem 1.65rem; background: #f2deb4; border: 1px solid #cdbb94; box-shadow: 6px 9px 0 #292c240b; transform: rotate(5deg); }
+.hero-card { position: relative; justify-self: start; width: 265px; padding: 1.5rem 1.65rem; background: #f2deb4; border: 1px solid #cdbb94; box-shadow: 6px 9px 0 #292c240b; transform: rotate(5deg); }
 .hero-card::before { content: ''; width: 66px; height: 21px; background: #e7d9b5bd; position: absolute; left: calc(50% - 33px); top: -11px; transform: rotate(-7deg); }
 .hero-card-kicker { margin: 0; font-size: .57rem; letter-spacing: .18em; text-transform: uppercase; color: #655139; }
 .hero-card-title { font: 600 1.65rem var(--font-d); margin: .4rem 0; }
@@ -216,6 +216,12 @@ p { margin: .5rem 0; }
 .toast.show { opacity: 1; transform: translate(-50%, 0); }
 .wa-float { position: fixed; right: 20px; bottom: 20px; z-index: 55; display: grid; place-items: center; width: 56px; height: 56px; background: var(--wa); border-radius: 50%; color: white; text-decoration: none; font-size: 1.4rem; }
 
+@media (min-width: 1200px) {
+  .hero { grid-template-columns: minmax(0, 1fr) 552px; }
+  .logo-seal { justify-self: end; }
+  .hero-card { width: 220px; margin-top: -125px; margin-left: -8px; padding: 1.2rem; }
+  .hero-card-title { font-size: 1.5rem; }
+}
 @media (min-width: 1440px) {
   .hero { padding-block: 100px 110px; }
 }
@@ -228,8 +234,7 @@ p { margin: .5rem 0; }
   .logo-seal img { width: 190px; height: 190px; }
   .seal-top { top: 30px; font-size: .5rem; }
   .seal-bottom { bottom: 30px; font-size: .5rem; }
-  .hero-art { min-height: 550px; }
-  .hero-card { right: 0; width: 245px; }
+  .hero-card { width: 245px; }
   .split { gap: 3rem; }
   .qi { gap: .6rem; padding-left: 1rem; }
 }
@@ -243,12 +248,11 @@ p { margin: .5rem 0; }
   .hero { padding-inline: 40px; gap: 1.8rem; }
   .hero-sub { font-size: 3.6rem; }
   .hero .eyebrow { font-size: .55rem; letter-spacing: .1em; }
-  .hero-art { min-height: 550px; }
   .logo-seal { width: 270px; height: 270px; }
   .logo-seal img { width: 160px; height: 160px; }
   .seal-top { top: 27px; font-size: .45rem; }
   .seal-bottom { bottom: 27px; font-size: .45rem; }
-  .hero-card { width: 225px; right: -5px; padding: 1.2rem; }
+  .hero-card { width: 225px; padding: 1.2rem; }
   .quick-grid { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
   .qi:nth-child(3) { border-left: 0; padding-left: 0; }
   .split { grid-template-columns: 1fr; }
@@ -269,8 +273,7 @@ p { margin: .5rem 0; }
   .hero-desc { font-size: .88rem; margin-bottom: 1.4rem; }
   .hero-btns { gap: .6rem; }
   .hero-meta { margin-top: 1.5rem; }
-  .hero-art { width: min(360px, 100%); justify-self: center; min-height: 510px; margin-top: .5rem; }
-  .hero-card { bottom: 0; right: 0; }
+  .hero-art { width: min(360px, 100%); justify-self: center; margin-top: .5rem; }
   .quick-grid { padding-block: 24px; gap: 1.5rem .7rem; }
   .qi { gap: .5rem; font-size: 1rem; padding-left: .8rem; }
   .qi span { font-size: .63rem; }
@@ -306,8 +309,6 @@ p { margin: .5rem 0; }
   .logo-seal { width: 240px; height: 240px; }
   .logo-seal img { width: 140px; height: 140px; }
   .seal-top, .seal-bottom { font-size: .38rem; }
-  .hero-art { min-height: 500px; }
-  .hero-card { right: 6px; }
   .qi { padding-left: .5rem; gap: .3rem; }
   .qi span { font-size: .58rem; }
 }
