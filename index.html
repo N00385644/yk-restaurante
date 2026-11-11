@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="es-PE">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>YK | Desayunos y menú del día con delivery</title>
+<meta name="description" content="YK: desayunos desde S/ 1, menú del día desde S/ 7 y platos a la carta. Atención de 7:00 a.m. a 3:00 p.m. con delivery a domicilio.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23a13d1f'/><text x='50' y='68' text-anchor='middle' font-family='Georgia,serif' font-size='42' font-weight='bold' fill='%23fff8ee'>YK</text></svg>">
+<meta property="og:type" content="restaurant">
+<meta property="og:title" content="YK — Sazón casera de 7 a 3">
+<meta property="og:description" content="Desayunos, menú del día y platos a la carta. Delivery a domicilio.">
+<meta property="og:locale" content="es_PE">
+<meta name="theme-color" content="#f8f5ee">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="stily.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Restaurant","name":"YK","servesCuisine":"Peruana","description":"Desayunos, menú del día y platos a la carta. Delivery a domicilio.","priceRange":"S/ 1 – S/ 60","openingHours":"Mo-Su 07:00-15:00"}</script>
+</head>
+<body>
+<a class="skip-link" href="#menu">Saltar al menú</a>
+
+<header class="header" id="header">
+  <nav class="nav" aria-label="Navegación principal">
+    <a class="brand" href="#inicio" aria-label="YK, inicio">
+      <span class="brand-logo" aria-hidden="true"><img src="assets/logo-yk.png" alt="" width="54" height="54"></span>
+      <span class="brand-text">
+        <strong id="brandName">YK</strong>
+        <small id="brandTagline">Desayunos · Menú del día</small>
+      </span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Abrir menú"><svg class="ui-icon" width="20" height="20" aria-hidden="true"><use href="assets/icons.svg#menu"></use></svg></button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#menu">Menú</a></li>
+      <li><a href="#nosotros">Nosotros</a></li>
+      <li><a href="#delivery">Delivery</a></li>
+      <li><a href="#faq">Preguntas</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="btn-icon" id="cartOpenBtn" aria-label="Abrir carrito de pedidos"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6 7h15l-2 9H8L5 3H2"/><circle cx="9" cy="21" r="1"/><circle cx="18" cy="21" r="1"/></svg><span class="cart-count" id="cartCount">0</span></button>
+      <a class="btn btn-primary btn-sm nav-cta" href="#menu">Ver menú</a>
+    </div>
+  </nav>
+</header>
+
+<main id="main">
+  <!-- HERO -->
+  <section class="hero" id="inicio">
+    <div class="hero-pattern" aria-hidden="true"></div>
+    <div class="hero-inner">
+      <p class="eyebrow">Desayunos · Menú del día · Delivery</p>
+      <h1>
+        <span class="hero-name" data-cfg="nombre">YK</span>
+        <span class="hero-sub" data-cfg="eslogan">Sazón casera de 7 a 3.</span>
+      </h1>
+      <p class="hero-desc" data-cfg="descripcionCorta">Desayunos, menú del día y platos a la carta. Delivery a domicilio.</p>
+      <div class="hero-btns">
+        <a href="#menu" class="btn btn-primary">Ver el menú <span aria-hidden="true">↗</span></a>
+        <a href="#delivery" class="btn btn-ghost">Cómo pedir</a>
+      </div>
+      <div class="hero-meta">
+        <span><svg class="ui-icon" width="20" height="20" aria-hidden="true"><use href="assets/icons.svg#clock"></use></svg> <span data-cfg="horarioResumen">Lunes a domingo · 7:00 a.m. – 3:00 p.m.</span></span>
+        <span><svg class="ui-icon" width="20" height="20" aria-hidden="true"><use href="assets/icons.svg#scooter"></use></svg> Delivery a domicilio</span>
+      </div>
+    </div>
+    <div class="hero-art">
+      <div class="logo-seal" aria-hidden="true">
+        <span class="seal-top">DESAYUNOS · MENÚ DEL DÍA</span>
+        <img src="assets/logo-yk.png" alt="" width="300" height="300" fetchpriority="high">
+        <span class="seal-bottom">SAZÓN CASERA DE 7 A 3.</span>
+      </div>
+      <span class="hero-spark" aria-hidden="true">✳</span>
+      <aside class="hero-card" aria-label="Menú del día">
+      <p class="hero-card-kicker">Todos los días</p>
+      <p class="hero-card-title">Menú del día</p>
+      <p class="hero-card-price"><span>desde</span> S/ 7</p>
+      <p class="hero-card-note">Entrada + segundo. Consulta las opciones del día.</p>
+      <a href="#menu">Ver opciones <span aria-hidden="true">→</span></a>
+      </aside>
+    </div>
+  </section>
+
+  <!-- INFO RÁPIDA -->
+  <section class="quick-info" aria-label="Información rápida">
+    <div class="container quick-grid">
+      <div class="qi"><svg class="ui-icon" width="20" height="20" aria-hidden="true"><use href="assets/icons.svg#clock"></use></svg> <div><strong>Horario</strong><span>Lun a dom · 7 a.m. – 3 p.m.</span></div></div>
+      <div class="qi"><svg class="ui-icon" width="20" height="20" aria-hidden="true"><use href="assets/icons.svg#utensils"></use></svg> <div><strong>Menú del día</strong><span>Desde S/ 7</span></div></div>
+      <div class="qi"><svg class="ui-icon" width="20" height="20" aria-hidden="true"><use href="assets/icons.svg#scooter"></use></svg> <div><strong>Delivery</strong><span>A domicilio</span></div></div>
+      <div class="qi"><svg class="ui-icon" width="20" height="20" aria-hidden="true"><use href="assets/icons.svg#plate"></use></svg> <div><strong>Local</strong><span>Atención en el local</span></div></div>
+    </div>
+  </section>
+
+  <!-- MENÚ -->
+  <section class="section" id="menu">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Carta</p>
+          <h2>Menú</h2>
+        </div>
+        <p class="section-sub">Desayunos, menú del día y platos a la carta. Precios en soles (S/).</p>
+      </div>
+
+      <div class="menu-toolbar">
+        <div class="search-box">
+          <label class="sr-only" for="searchInput">Buscar plato</label>
+          <input type="search" id="searchInput" placeholder="Buscar plato… (ej. caldo, lomo, cuy)" autocomplete="off">
+        </div>
+        <div class="filters" id="filters" aria-label="Filtrar por categoría"></div>
+      </div>
+
+      <p class="menu-status" id="menuStatus" role="status"></p>
+      <p class="menu-note">El menú del día incluye entrada + segundo. También contamos con platos de S/ 12 y S/ 15: pregunta por las opciones del día. Los platos sin precio indicado se consultan al momento de pedir.</p>
+      <div id="menuGrid" class="menu-groups"></div>
+    </div>
+  </section>
+
+  <!-- NOSOTROS -->
+  <section class="section section-alt" id="nosotros">
+    <div class="container split">
+      <div>
+        <p class="eyebrow">Sobre nosotros</p>
+        <h2>Cocina casera, de la mañana a la tarde.</h2>
+        <p data-cfg="descripcionLarga">En YK empezamos temprano con caldos, panes y avena; al mediodía servimos el menú del día y platos a la carta. Atendemos todos los días de 7:00 a.m. a 3:00 p.m. y llevamos tu pedido a domicilio.</p>
+        <ul class="values">
+          <li><span class="value-icon" aria-hidden="true"><svg class="ui-icon" width="20" height="20" aria-hidden="true"><use href="assets/icons.svg#sun"></use></svg></span><div><strong>Desde las 7 a.m.</strong><small>Desayunos, caldos y panes.</small></div></li>
+          <li><span class="value-icon" aria-hidden="true"><svg class="ui-icon" width="20" height="20" aria-hidden="true"><use href="assets/icons.svg#utensils"></use></svg></span><div><strong>Menú del día</strong><small>Entrada y segundo desde S/ 7.</small></div></li>
+          <li><span class="value-icon" aria-hidden="true"><svg class="ui-icon" width="20" height="20" aria-hidden="true"><use href="assets/icons.svg#scooter"></use></svg></span><div><strong>Delivery a domicilio</strong><small>Llevamos tu pedido a casa.</small></div></li>
+        </ul>
+      </div>
+      <div class="about-panel" aria-label="Datos del restaurante YK">
+        <img class="about-mark" src="assets/logo-yk.png" alt="" width="240" height="240" loading="lazy" aria-hidden="true">
+        <p class="about-quote">“Sazón casera de 7 a 3.”</p>
+        <dl class="about-facts">
+          <div><dt>Horario</dt><dd>Lunes a domingo<br>7:00 a.m. – 3:00 p.m.</dd></div>
+          <div><dt>Servicio</dt><dd>Local y delivery</dd></div>
+          <div><dt>Menú del día</dt><dd>Desde S/ 7</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <!-- DELIVERY -->
+  <section class="section" id="delivery">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Pedidos</p>
+          <h2>Delivery a domicilio</h2>
+        </div>
+        <p class="section-sub">Cocina casera hasta tu casa. Atendemos hasta las 3 p.m.</p>
+      </div>
+      <div class="steps">
+        <article class="step">
+          <span class="step-num" aria-hidden="true">1</span>
+          <h3>Elige tus platos</h3>
+          <p>Explora el menú y arma tu pedido en el carrito.</p>
+        </article>
+        <article class="step">
+          <span class="step-num" aria-hidden="true">2</span>
+          <h3>Escríbenos</h3>
+          <p>Envíanos el resumen por WhatsApp o llámanos.</p>
+        </article>
+        <article class="step">
+          <span class="step-num" aria-hidden="true">3</span>
+          <h3>Recibe tu pedido</h3>
+          <p>Coordinamos la entrega a domicilio.</p>
+        </article>
+      </div>
+      <div class="delivery-cta">
+        <div>
+          <h3>Arma tu pedido y escríbenos</h3>
+          <p>El pedido queda pendiente de confirmación del restaurante.</p>
+        </div>
+        <a class="btn btn-whatsapp" id="deliveryWhatsapp" href="#menu">Armar mi pedido</a>
+      </div>
+      <p class="contact-pending" id="contactPending">Números de información y delivery: por confirmar.</p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section section-alt" id="faq">
+    <div class="container narrow">
+      <p class="eyebrow">Dudas comunes</p>
+      <h2>Preguntas frecuentes</h2>
+      <div class="accordion" id="faqBox"></div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section class="section" id="contacto">
+    <div class="container split">
+      <div>
+        <p class="eyebrow">Contacto</p>
+        <h2>Hablemos</h2>
+        <ul class="contact-list">
+          <li><span class="contact-icon" aria-hidden="true"><svg class="ui-icon" width="20" height="20" aria-hidden="true"><use href="assets/icons.svg#clock"></use></svg></span><div><strong>Horario</strong><span>Todos los días · 7:00 a.m. – 3:00 p.m.</span></div></li>
+          <li><span class="contact-icon" aria-hidden="true"><svg class="ui-icon" width="20" height="20" aria-hidden="true"><use href="assets/icons.svg#phone"></use></svg></span><div><strong>Información</strong><span data-cfg="telefonoInfo">Por confirmar</span></div></li>
+          <li><span class="contact-icon" aria-hidden="true"><svg class="ui-icon" width="20" height="20" aria-hidden="true"><use href="assets/icons.svg#scooter"></use></svg></span><div><strong>Delivery</strong><span data-cfg="telefonoDelivery">Por confirmar</span></div></li>
+          <li><span class="contact-icon" aria-hidden="true"><svg class="ui-icon" width="20" height="20" aria-hidden="true"><use href="assets/icons.svg#plate"></use></svg></span><div><strong>Servicio</strong><span>Local y delivery</span></div></li>
+        </ul>
+        <p class="contact-note" id="contactNumbersNote">Los números de atención se agregarán cuando el negocio los confirme.</p>
+      </div>
+      <div class="contact-panel">
+        <h3>Tu pedido, sin vueltas</h3>
+        <p>Elige tus platos en el menú y revisa el resumen en tu carrito.</p>
+        <button class="btn btn-primary btn-block" id="contactWhatsappBtn">Abrir mi pedido <svg class="ui-icon" width="20" height="20" aria-hidden="true"><use href="assets/icons.svg#cart"></use></svg></button>
+        <p class="contact-note">Los pedidos quedan pendientes de confirmación por el restaurante.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <div class="footer-brand"><img src="assets/logo-yk.png" alt="" width="70" height="70" loading="lazy"><strong id="footName">YK</strong></div>
+      <p data-cfg="descripcionCorta">Desayunos, menú del día y platos a la carta. Delivery a domicilio.</p>
+    </div>
+    <nav aria-label="Enlaces de pie">
+      <a href="#menu">Menú</a>
+      <a href="#delivery">Delivery</a>
+      <a href="#faq">Preguntas</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <div class="footer-info">
+      <p><svg class="ui-icon" width="20" height="20" aria-hidden="true"><use href="assets/icons.svg#clock"></use></svg> Lunes a domingo · 7:00 a.m. – 3:00 p.m.</p>
+      <p><svg class="ui-icon" width="20" height="20" aria-hidden="true"><use href="assets/icons.svg#utensils"></use></svg> Menú del día desde S/ 7</p>
+      <p><svg class="ui-icon" width="20" height="20" aria-hidden="true"><use href="assets/icons.svg#scooter"></use></svg> Delivery a domicilio</p>
+    </div>
+  </div>
+  <div class="footer-bottom">© <span id="year"></span> <span data-cfg="nombre">YK</span> · Sazón casera de 7 a 3.</div>
+</footer>
+
+<!-- CARRITO -->
+<div class="cart-overlay" id="cartOverlay" hidden></div>
+<aside class="cart" id="cartDrawer" role="dialog" aria-modal="true" aria-label="Carrito de pedidos" aria-hidden="true" inert>
+  <header>
+    <div>
+      <h3><svg class="ui-icon" width="20" height="20" aria-hidden="true"><use href="assets/icons.svg#cart"></use></svg> Tu pedido</h3>
+      <small>YK · Desayunos y menú del día</small>
+    </div>
+    <button id="cartClose" aria-label="Cerrar carrito"><svg class="ui-icon" width="20" height="20" aria-hidden="true"><use href="assets/icons.svg#close"></use></svg></button>
+  </header>
+  <p class="cart-pending"><svg class="ui-icon" width="20" height="20" aria-hidden="true"><use href="assets/icons.svg#hourglass"></use></svg> El pedido queda <strong>pendiente de confirmación</strong>. Nada se cobra automáticamente.</p>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="cart-form">
+    <div class="row2">
+      <label>Nombre*<input id="cliNombre" autocomplete="name" placeholder="Tu nombre"></label>
+      <label>Teléfono<input id="cliTelefono" inputmode="tel" autocomplete="tel" placeholder="999 888 777"></label>
+    </div>
+    <label>Modalidad
+      <select id="cliModalidad"></select>
+    </label>
+    <label id="dirWrap" hidden>Dirección de entrega*<input id="cliDireccion" placeholder="Av., número, referencia"></label>
+    <label>Observaciones<textarea id="cliObs" rows="2" placeholder="Sin ají, referencia de entrega, etc."></textarea></label>
+    <div class="totals"><span>Total estimado</span><strong id="cartTotal">S/ 0.00</strong></div>
+    <p class="err" id="cartError" role="alert"></p>
+    <button class="btn btn-whatsapp btn-block" id="cartSend">Enviar pedido por WhatsApp</button>
+    <button class="btn btn-ghost btn-block" id="cartClear">Vaciar carrito</button>
+    <p class="cart-note">El restaurante confirmará disponibilidad, precio final y tiempo de entrega.</p>
+  </div>
+</aside>
+
+<a class="wa-float" id="waFloat" href="#" target="_blank" rel="noopener" aria-label="Abrir WhatsApp" hidden><svg class="ui-icon" width="20" height="20" aria-hidden="true"><use href="assets/icons.svg#message"></use></svg></a>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="config.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

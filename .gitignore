@@ -1,0 +1,15 @@
+# Solo se publica el sitio principal y sus recursos.
+/*
+!/.gitignore
+!/.nojekyll
+!/index.html
+!/stily.css
+!/app.js
+!/config.js
+!/README.md
+!/robots.txt
+!/sitemap.xml
+!/assets/
+/assets/*
+!/assets/logo-yk.png
+!/assets/icons.svg

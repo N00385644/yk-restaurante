@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://n00385644.github.io/yk-restaurante/sitemap.xml
